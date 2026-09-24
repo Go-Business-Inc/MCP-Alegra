@@ -14,7 +14,8 @@
     "test:connection": "tsx scripts/test-connection.ts",
     "explore": "tsx scripts/explore-day.ts",
     "reconcile": "tsx scripts/reconcile.ts",
-    "pay-invoice": "tsx scripts/pay-invoice.ts"
+    "pay-invoice": "tsx scripts/pay-invoice.ts",
+    "prepare": "npm run build"
   },
   "engines": {
     "node": ">=20"

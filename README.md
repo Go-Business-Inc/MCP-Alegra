@@ -10,11 +10,9 @@ cp .env.example .env   # pegar ALEGRA_TOKEN (solo la primera vez: sobrescribe el
 npm run test:connection
 ```
 
-Registrar en Claude Code (guía completa en [INSTALL.md](INSTALL.md)):
-
-```bash
-claude mcp add alegra --scope user -- npx tsx "$(pwd)/src/index.ts"
-```
+`npm install` compila a `dist/`. El servidor se registra con la ruta absoluta de node y de `dist/index.js`,
+tanto en Claude Code (`~/.claude.json`) como en Claude Desktop/Cowork (`claude_desktop_config.json`).
+Guía paso a paso en [INSTALL.md](INSTALL.md).
 
 ## Herramientas
 
