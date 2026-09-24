@@ -1,0 +1,32 @@
+{
+  "name": "mcp-alegra",
+  "version": "0.1.0",
+  "description": "MCP local para consultar Alegra (MyOffice)",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-alegra": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test:connection": "tsx scripts/test-connection.ts",
+    "explore": "tsx scripts/explore-day.ts",
+    "reconcile": "tsx scripts/reconcile.ts",
+    "pay-invoice": "tsx scripts/pay-invoice.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.1",
+    "dotenv": "^18.0.3",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
