@@ -1,6 +1,6 @@
 {
   "name": "mcp-alegra",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "MCP local para consultar Alegra (MyOffice)",
   "type": "module",
   "main": "dist/index.js",
@@ -15,6 +15,7 @@
     "explore": "tsx scripts/explore-day.ts",
     "reconcile": "tsx scripts/reconcile.ts",
     "pay-invoice": "tsx scripts/pay-invoice.ts",
+    "sync-advances": "tsx scripts/sync-advances.ts",
     "prepare": "npm run build"
   },
   "engines": {

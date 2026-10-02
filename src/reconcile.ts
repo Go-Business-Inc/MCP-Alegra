@@ -148,7 +148,7 @@ export async function reconcilePos(date: string, vouchers: Voucher[], bankAccoun
     // 3) Vouchers sin pago: sugerir facturas abiertas con saldo igual al monto
     const unmatchedVouchers = pendingVouchers.filter(v => !usedVouchers.has(v.fact));
     let openInvoices: any[] = [];
-    if (unmatchedVouchers.length) openInvoices = await alegra.listOpenInvoices(addDays(date, -OPEN_INVOICE_LOOKBACK_DAYS));
+    if (unmatchedVouchers.length) openInvoices = await alegra.listOpenInvoices({ since: addDays(date, -OPEN_INVOICE_LOOKBACK_DAYS) });
     const vouchersWithoutPayment = unmatchedVouchers.map(v => ({
         voucher: v,
         suggestedAnotation: voucherAnotation(v, date),
